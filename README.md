@@ -8,7 +8,7 @@ Provides authentication functionality and session tracking using various adapter
 - LDAP and Active Directory via the [ldap](http://php.net/ldap) extension
 - OAuth via customized adapters
 
-Note that the purpose of this package is only to authenticate user credentials. It does not currently, and probably will not in the future, handle user account creation and management. That is more properly the domain of application-level functionality, or at least a separate Aura bundle.
+Note that the purpose of this package is only to authenticate user credentials. It does not currently, and probably will not in the future, handle user account creation and management. That is more properly the domain of application-level func(tionality, or at least a separate Aura bundle.
 
 ## Foreword
 
@@ -359,7 +359,7 @@ Here is a legacy example where passwords are MD5 hashed in an accounts table:
 <?php
 $pdo = new \PDO(...);
 $hash = new PasswordVerifier('md5');
-$cols = ('username', 'md5password');
+$cols = ['username', 'md5password'];
 $from = 'accounts';
 $pdo_adapter = $auth_factory->newPdoAdapter($pdo, $hash, $cols, $from);
 ?>
